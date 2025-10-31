@@ -1,0 +1,616 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Estilos del header y nav */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4CAF50;
+        }
+
+        /* Estilos del main */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+            width: 100%;
+        }
+
+        .hero {
+            background-color: #f4f4f4;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .circuloimg{
+          height: 300pt;
+          width: 375pt;
+          display: flex;
+          margin-top: 50pt;
+          border-radius: 20px;
+          padding: 5px;
+          overflow: hidden;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+          transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .circuloimg:hover {
+          transform: scale(1.05);
+        }
+        .circulo{
+          align-items: center;
+          margin-left: 240pt;
+          
+        }
+        .title-c{
+          font-size: 20pt;
+          color: #333;
+          margin-left: 295pt;
+          margin-top: 20pt;
+        }
+        .title-v{
+          font-size: 20pt;
+          color: #333;
+          margin-left: 330pt;
+          margin-top: 140pt;
+        }
+        .video{
+          width: 600pt;
+          height: 500pt;
+          margin-left: 120pt;
+          border-radius: 20px;
+          padding: 5px;
+          overflow: hidden;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+          transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .video:hover {
+          transform: scale(1.05);
+        }
+        .mapa{
+          width: 800pt;
+          height: 400pt;
+          margin-left: 25pt;
+          margin-top: 70pt;
+          border-radius: 20px;
+          padding: 5px;
+          overflow: hidden;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+          transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .mapa:hover {
+          transform: scale(1.05);
+        }
+        .title-m{
+          font-size: 20pt;
+          color: #333;
+          margin-left: 265pt;
+          margin-top: 20pt;
+        }
+        .collage-img{
+          height: 300pt;
+          width: 450pt;
+          margin-left: 190pt;
+          border-radius: 20px;
+          padding: 5px;
+          overflow: hidden;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+          transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .collage-img:hover {
+          transform: scale(1.05);
+        }
+        .collage{
+          margin-top: 60pt;
+        }
+        .title-co{
+          margin-top: 80pt;
+          font-size: 20pt;
+          color: #333;
+          margin-left: 295pt;
+        }
+        .content-section {
+            padding: 2rem 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+
+
+
+
+
+        /* Estilos del footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+  .footer-links {
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 20px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  background-color: rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: .3s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: .3s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: .3s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: .3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: .3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes hero-gradient-animation {
+    0% {
+        --x-0: 40%;
+        --s-start-0: 0%;
+        --s-end-0: 50%;
+        --c-0: rgb(50, 50, 53);
+        --y-0: 20%;
+        --c-1: hsla(189.0000000000006, 0%, 100%, 1);
+        --y-1: 0%;
+        --x-1: 80%;
+        --s-start-1: 0%;
+        --s-end-1: 50%;
+        --y-2: 50%;
+        --x-2: 0%;
+        --c-2: hsla(355.0000000000002, 100%, 99%, 1);
+        --s-start-2: 0%;
+        --s-end-2: 50%;
+        --y-3: 50%;
+        --c-3: hsla(340.0000000000001, 0%, 100%, 1);
+        --s-start-3: 0%;
+        --s-end-3: 50%;
+        --x-3: 80%;
+        --x-4: 0%;
+        --y-4: 100%;
+        --s-start-4: 0%;
+        --s-end-4: 50%;
+        --c-4: rgb(50, 50, 53);
+        --c-5: rgb(50, 50, 53);
+        --y-5: 100%;
+        --s-start-5: 0%;
+        --s-end-5: 50%;
+        --x-5: 80%;
+        --c-6: hsla(343.0000000000029, 15%, 94%, 1);
+        --y-6: 0%;
+        --s-start-6: 0%;
+        --s-end-6: 50%;
+        --x-6: 0%;
+    }
+
+    100% {
+        --x-0: 43%;
+        --s-start-0: 15;
+        --s-end-0: 54;
+        --c-0: hsla(27.99999999999899, 0%, 93%, 1);
+        --y-0: 11%;
+        --c-1: hsla(189.0000000000006, 0%, 100%, 1);
+        --y-1: 29%;
+        --x-1: 15%;
+        --s-start-1: 15;
+        --s-end-1: 54;
+        --y-2: 26%;
+        --x-2: 96%;
+        --c-2: hsla(355.0000000000002, 100%, 99%, 1);
+        --s-start-2: 15;
+        --s-end-2: 54;
+        --y-3: 85%;
+        --c-3: hsla(340.0000000000001, 0%, 100%, 1);
+        --s-start-3: 15;
+        --s-end-3: 54;
+        --x-3: 53%;
+        --x-4: 77%;
+        --y-4: 66%;
+        --s-start-4: 15;
+        --s-end-4: 54;
+        --c-4: rgb(50, 50, 53);
+        --c-5: hsla(242.0000000000007, 1%, 75%, 1);
+        --y-5: 22%;
+        --s-start-5: 15;
+        --s-end-5: 54;
+        --x-5: 10%;
+        --c-6: hsla(343.0000000000029, 15%, 94%, 1);
+        --y-6: 26%;
+        --s-start-6: 15;
+        --s-end-6: 54;
+        --x-6: 38%;
+    }
+}
+
+@property --x-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 40%
+}
+
+@property --s-start-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --c-0 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(27.99999999999899, 0%, 93%, 1)
+}
+
+@property --y-0 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 20%
+}
+
+@property --c-1 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(189.0000000000006, 0%, 100%, 1)
+}
+
+@property --y-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --x-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%
+}
+
+@property --s-start-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-1 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --y-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --x-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --c-2 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(355.0000000000002, 100%, 99%, 1)
+}
+
+@property --s-start-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-2 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --y-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --c-3 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(340.0000000000001, 0%, 100%, 1)
+}
+
+@property --s-start-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --x-3 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%
+}
+
+@property --x-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --y-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --s-start-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-4 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --c-4 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(242.2058823529412, 23%, 47%, 1)
+}
+
+@property --c-5 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(242.0000000000007, 44%, 30%, 1)
+}
+
+@property --y-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --s-start-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --x-5 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 80%
+}
+
+@property --c-6 {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: hsla(343.0000000000029, 15%, 94%, 1)
+}
+
+@property --y-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-start-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+@property --s-end-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 50%
+}
+
+@property --x-6 {
+    syntax: '<percentage>';
+    inherits: false;
+    initial-value: 0%
+}
+
+body {
+    --x-0: 40%;
+    --c-0: hsla(27.99999999999899, 0%, 93%, 1);
+    --y-0: 20%;
+    --c-1: hsla(189.0000000000006, 0%, 100%, 1);
+    --y-1: 0%;
+    --x-1: 80%;
+    --y-2: 50%;
+    --x-2: 0%;
+    --c-2: hsla(355.0000000000002, 100%, 99%, 1);
+    --y-3: 50%;
+    --c-3: hsla(340.0000000000001, 0%, 100%, 1);
+    --x-3: 80%;
+    --x-4: 0%;
+    --y-4: 100%;
+    --c-4: hsla(242.2058823529412, 23%, 47%, 1);
+    --c-5: hsla(242.0000000000007, 44%, 30%, 1);
+    --y-5: 100%;
+    --x-5: 80%;
+    --c-6: hsla(343.0000000000029, 15%, 94%, 1);
+    --y-6: 0%;
+    --x-6: 0%;
+    ;
+    background-color: hsla(240, 75%, 11%, 1);
+    background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)), radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4)), radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5), transparent var(--s-end-5)), radial-gradient(circle at var(--x-6) var(--y-6), var(--c-6) var(--s-start-6), transparent var(--s-end-6));
+    animation: hero-gradient-animation 10s linear infinite alternate;
+    background-blend-mode: normal, normal, normal, normal, normal, normal, normal;
+}
